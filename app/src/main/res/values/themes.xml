@@ -21,9 +21,10 @@
       <item name="colorOnSurface">@color/color_on_surface</item>
       <item name="colorOnError">@color/color_on_error</item>
 
-<!--      shape-->
-
+   <!-- shape-->
       <item name="shapeAppearanceSmallComponent">@style/ShapeApperence.MyTheme.SmallApperence</item>
+      <item name="shapeAppearanceMediumComponent">@style/ShapeApperence.MyTheme.MediumApperence</item>
+      <item name="shapeAppearanceLargeComponent">@style/ShapeApperence.MyTheme.LargeApperence</item>
    </style>
 
    <style name="Base.MaterialThemeBuilder" parent="Theme.MaterialComponents.DayNight.NoActionBar">
