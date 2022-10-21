@@ -64,8 +64,12 @@
             </FrameLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNombre"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                style="@style/MyTheme.DayNight.TextInputLayout"
+                app:helperText="@string/addArtist_help_required"
+                app:startIconDrawable="@drawable/ic_person">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etNombre"
                     android:layout_width="match_parent"
@@ -76,8 +80,12 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilApellidos"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                style="@style/MyTheme.DayNight.TextInputLayout"
+                app:helperText="@string/addArtist_help_required"
+                app:startIconDrawable="@drawable/ic_person">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etApellidos"
                     android:layout_width="match_parent"
@@ -98,7 +106,10 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50">
+                    android:layout_weight="50"
+                    style="@style/MyTheme.DayNight.TextInputLayout"
+                    android:layout_marginEnd="@dimen/common_padding_min"
+                    app:startIconDrawable="@drawable/ic_insert_invitation">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etFechaNacimiento"
                         android:layout_width="match_parent"
@@ -108,9 +119,13 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilEstatura"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50">
+                    android:layout_weight="50"
+                    android:layout_marginStart="@dimen/common_padding_min"
+                    style="@style/MyTheme.DayNight.TextInputLayout"
+                    app:helperText="@string/addArtist_help_estaturaMin">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etEstatura"
                         android:layout_width="match_parent"
@@ -123,7 +138,9 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                style="@style/MyTheme.DayNight.TextInputLayout"
+                app:startIconDrawable="@drawable/ic_place">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etLugarNacimiento"
                     android:layout_width="match_parent"
@@ -135,7 +152,9 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/item_padding_vertical"
+                style="@style/MyTheme.DayNight.TextInputLayout">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etNotas"
                     android:layout_width="match_parent"

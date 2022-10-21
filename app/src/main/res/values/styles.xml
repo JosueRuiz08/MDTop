@@ -41,5 +41,16 @@
         <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
 
+<!--    text fields-->
+    <style name="MyTheme.DayNight.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+        <item name="android:layout_marginStart">@dimen/item_padding_horizontal</item>
+        <item name="android:layout_marginEnd">@dimen/item_padding_horizontal</item>
+        <item name="android:layout_marginTop">@dimen/item_padding_horizontal</item>
+        android:layout_marginStart="@dimen/item_padding_horizontal"
+        android:layout_marginEnd="@dimen/item_padding_horizontal"
+        android:layout_marginTop="@dimen/item_padding_horizontal"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+    </style>
 </resources>
 
