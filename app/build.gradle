@@ -36,7 +36,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "androidx.constraintlayout:constraintlayout:${constraintVersion}"
     implementation "androidx.appcompat:appcompat:${appcompatVersion}"
-    implementation "com.google.android.material:material:${materialVersion}"
+//    implementation "com.google.android.material:material:${materialVersion}"
+    implementation 'com.google.android.material:material:1.6.1'
 
     implementation "com.github.Raizlabs.DBFlow:dbflow-core:${dbflowVersion}"
     implementation "com.github.Raizlabs.DBFlow:dbflow:${dbflowVersion}"
