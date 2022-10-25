@@ -146,11 +146,16 @@ public class DetalleActivity extends AppCompatActivity {
 //            }else{
 //                toolbar.getNavigationIcon().setTint(Color.WHITE);
 //            }
-            float percentage = (float)Math.abs(verticalOffset)/appBarLayout.getTotalScrollRange();
-            //int colorValue = percentage;
-            toolbar.getNavigationIcon().setTint(Color.rgb(127,127,127));
+            float percentage = Math.abs((float)Math.abs(verticalOffset)/appBarLayout.getTotalScrollRange() - 1);
+            int colorValue = (int) (percentage * 255);
+            if (toolbar.getNavigationIcon() != null) {
+                toolbar.getNavigationIcon().setTint(Color.rgb(colorValue,colorValue,colorValue));
+            }
 
-            etApellidos.setText("percentage = "+ percentage);
+
+            etApellidos.setText("VerticalScrool/appbar = "+ (float)Math.abs(verticalOffset)/appBarLayout.getTotalScrollRange());
+            etLugarNacimiento.setText("percentage = "+ percentage);
+            etNotas.setText("ColorValue = " + colorValue);
 
         });
 
