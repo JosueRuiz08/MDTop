@@ -52,10 +52,16 @@
         android:layout_marginTop="@dimen/item_padding_horizontal"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
     </style>
-    <!-- Alert Dialog -->
-    <style name="PickerDialogCut" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
-        <item name="materialCalendarHeaderLayout">@null</item>
+
+    <!-- pickers -->
+    <style name="PickerDialogCut" parent="BasePickerDialogCut">
+
     </style>
+    <style name="BasePickerDialogCut" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+    <item name="materialCalendarHeaderLayout">@null</item>
+    </style>
+
+    <!-- Alert Dialog -->
     <style name="MyMaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
         <item name="colorPrimary">@color/color_primary_variant</item>
     </style>

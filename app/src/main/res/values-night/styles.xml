@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PickerDialogCut" parent="BasePickerDialogCut">
+        <item name="materialCalendarHeaderTitle">@style/MyHeaderTitle</item>
+        <item name="materialCalendarHeaderSelection">@style/MyHeaderSelection</item>
+        <item name="materialCalendarHeaderCancelButton">@style/Widget.MaterialComponents.MaterialCalendar.HeaderCancelButton</item>
+        <item name="materialCalendarHeaderToggleButton">@style/MyHeaderToggleButton</item>
+    </style>
+
+    <style name="MyHeaderTitle" parent="@style/Widget.MaterialComponents.MaterialCalendar.HeaderTitle">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+    <style name="MyHeaderSelection" parent="@style/Widget.MaterialComponents.MaterialCalendar.HeaderSelection">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+    <style name="MyHeaderToggleButton" parent="@style/Widget.MaterialComponents.MaterialCalendar.HeaderToggleButton">
+        <item name="android:tint">?attr/colorOnSurface</item>
+    </style>
+</resources>
