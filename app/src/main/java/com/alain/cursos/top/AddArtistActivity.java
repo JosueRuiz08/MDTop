@@ -182,6 +182,7 @@ public class AddArtistActivity extends AppCompatActivity {
     public void onSetFecha() {
 
         MaterialDatePicker.Builder<Long> builder = MaterialDatePicker.Builder.datePicker();
+        builder.setTheme(R.style.PickerDialogCut);
 
         MaterialDatePicker<?> picker = builder.build();
         picker.addOnPositiveButtonClickListener(selection -> {
