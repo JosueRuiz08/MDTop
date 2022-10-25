@@ -30,7 +30,8 @@
                 android:enabled="false"
                 android:hint="@string/artist_hint_nombre"
                 android:inputType="textPersonName|textCapWords"
-                android:maxLength="@integer/nombre_maxLenght" />
+                android:maxLength="@integer/nombre_maxLenght"
+                tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout

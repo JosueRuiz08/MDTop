@@ -23,4 +23,7 @@
     <color name="color_on_error">#ffffff</color>
 
     <color name="color_divider">#1E000000</color>
+
+    <!-- CollapsingToolbarLayout -->
+    <color name="color_collapsing_layout">@color/color_primary</color>
 </resources>
