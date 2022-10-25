@@ -11,6 +11,7 @@ package com.alain.cursos.top;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.util.Log;
@@ -45,11 +46,20 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
     @BindView(R.id.containerMain)
     CoordinatorLayout containerMain;
 
+    private final String SP_DARK_THEME = "spDarkTheme";
+
+    private SharedPreferences mSharedPreferences;
+    private boolean mIsModeNight;
+
+
     private ArtistaAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        configTheme();
+        
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
@@ -59,6 +69,14 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
 
         if (SQLite.select().from(Artista.class).count() == 0) {
             generateArtist();
+        }
+    }
+
+    private void configTheme() {
+        mSharedPreferences =  getPreferences(MODE_PRIVATE);
+        mIsModeNight = mSharedPreferences.getBoolean(SP_DARK_THEME,false);
+        if (mIsModeNight){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         }
     }
 
@@ -146,10 +164,15 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_lightTheme) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            mIsModeNight = false;
         }
         if (id == R.id.action_darkTheme) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            mIsModeNight = true;
         }
+        SharedPreferences.Editor editor = mSharedPreferences.edit();
+        editor.putBoolean(SP_DARK_THEME,mIsModeNight);
+        editor.apply();
 
         return super.onOptionsItemSelected(item);
     }
