@@ -26,11 +26,11 @@
             android:label="@string/addArtist_title"/>
         <activity
             android:name=".DetalleActivity"
-            android:label="@string/detalle_title"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.alain.cursos.top.MainActivity" />
+            android:label="@string/detalle_title">
+<!--            android:parentActivityName=".MainActivity">-->
+<!--            <meta-data-->
+<!--                android:name="android.support.PARENT_ACTIVITY"-->
+<!--                android:value="com.alain.cursos.top.MainActivity" />-->
         </activity>
     </application>
 
