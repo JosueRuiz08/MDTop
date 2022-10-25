@@ -25,6 +25,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
 import com.raizlabs.android.dbflow.sql.language.SQLite;
 
@@ -170,7 +171,8 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
         if (vibrator != null){
             vibrator.vibrate(60);
         }
-        AlertDialog.Builder builder = new AlertDialog.Builder(this)
+//        AlertDialog.Builder builder = new AlertDialog.Builder(this)
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this)
                 .setTitle(R.string.main_dialogDelete_title)
                 .setMessage(String.format(Locale.ROOT, getString(R.string.main_dialogDelete_message),
                         artista.getNombreCompleto()))
